@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Color Scheme Generator
+![React CI Status](https://github.com/Ronkiro/color-scheme-generator/actions/workflows/react.yml/badge.svg)
+This project aims to provide a simple way to generate color schemes for your projects.
+
+Hosted at: https://ronkiro.github.io/color-scheme-generator/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
