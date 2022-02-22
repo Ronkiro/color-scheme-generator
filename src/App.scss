@@ -4,6 +4,20 @@
 }
 
 .colors {
-  display: flex;
+  // display: flex;
   justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+}
+
+@media screen and(max-width: 1319px) {
+  .colors {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .colors {
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  }
 }
