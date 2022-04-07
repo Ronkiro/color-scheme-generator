@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/color-scheme-generator/static/css/main.52fed369.css",
-    "main.js": "/color-scheme-generator/static/js/main.305ccf62.js",
+    "main.css": "/color-scheme-generator/static/css/main.8f3055e8.css",
+    "main.js": "/color-scheme-generator/static/js/main.a7a417a0.js",
     "static/js/787.2543da25.chunk.js": "/color-scheme-generator/static/js/787.2543da25.chunk.js",
     "index.html": "/color-scheme-generator/index.html",
-    "main.52fed369.css.map": "/color-scheme-generator/static/css/main.52fed369.css.map",
-    "main.305ccf62.js.map": "/color-scheme-generator/static/js/main.305ccf62.js.map",
+    "main.8f3055e8.css.map": "/color-scheme-generator/static/css/main.8f3055e8.css.map",
+    "main.a7a417a0.js.map": "/color-scheme-generator/static/js/main.a7a417a0.js.map",
     "787.2543da25.chunk.js.map": "/color-scheme-generator/static/js/787.2543da25.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52fed369.css",
-    "static/js/main.305ccf62.js"
+    "static/css/main.8f3055e8.css",
+    "static/js/main.a7a417a0.js"
   ]
 }
