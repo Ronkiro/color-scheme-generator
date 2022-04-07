@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import cConvert from "color-convert";
 import copyToClipboard from "./utils/copy";
 import Footer from "./components/Footer";
+import Toastr from 'toastr';
 
 const App = () => {
   const [hexs, setHexs] = useState([]);
@@ -28,18 +29,46 @@ const App = () => {
     );
   };
 
-  const newColorScheme = () => {
+  const newColorScheme = (tryToRecover=false) => {
+    let hue; 
+    let getNewHue = true;
+    if (tryToRecover) {
+      hue = window.localStorage.getItem("hue")
+      if (hue) {
+        getNewHue = false;
+        Toastr.success("We have recovered your last schema.", "Recovered!", {
+          timeOut: 3000,
+          progressBar: true,
+          closeButton: true,
+        });
+      }
+    }
+
+    if (getNewHue) {
+      hue = Math.floor(Math.random() * 256);
+      window.localStorage.setItem("hue", hue);
+    }
+
     const scheme = new ColorScheme();
     scheme
-      .from_hue(Math.floor(Math.random() * 256)) // Start the scheme
+      .from_hue(hue) // Start the scheme
       .scheme("tetrade")
       .variation("soft"); // Use the 'soft' color variation
     setHexs(scheme.colors());
+
+    if (!tryToRecover) {
+      Toastr.success("New schema generated.", "Generated!", {
+        timeOut: 3000,
+        progressBar: true,
+        closeButton: true,
+        preventDuplicates: true,
+      });
+    }
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
-    newColorScheme();
+    newColorScheme(true);
   }, []);
 
   useEffect(() => {
@@ -79,7 +108,7 @@ const App = () => {
           />
         ))}
       </div>
-      <div><button className="copy auto" onClick={newColorScheme}>&#62; Generate new color scheme &#60;</button></div>
+      <div><button className="copy auto" onClick={() => newColorScheme()}>&#62; Generate new color scheme &#60;</button></div>
       {clicked < 0 && <p>Click above to get color information.</p>}
       {clicked >= 0 && (
         <div className="descript">
