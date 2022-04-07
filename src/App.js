@@ -6,6 +6,7 @@ import ColorScheme from "color-scheme";
 import { useEffect, useState } from "react";
 import cConvert from "color-convert";
 import copyToClipboard from "./utils/copy";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [hexs, setHexs] = useState([]);
@@ -59,6 +60,7 @@ const App = () => {
   }, [hexs]);
 
   return (
+    <>
     <div className="App">
       <Header />
       <Description />
@@ -104,6 +106,8 @@ const App = () => {
         </div>
       )}
     </div>
+    <Footer />
+    </>
   );
 };
 
