@@ -21,6 +21,13 @@
     grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
   }
 }
+.auto {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  display: block;
+  margin: 0 auto;
+}
 
 .Footer {
   width: 100%;

@@ -28,14 +28,18 @@ const App = () => {
     );
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(async () => {
+  const newColorScheme = () => {
     const scheme = new ColorScheme();
     scheme
       .from_hue(Math.floor(Math.random() * 256)) // Start the scheme
       .scheme("tetrade")
       .variation("soft"); // Use the 'soft' color variation
     setHexs(scheme.colors());
+  }
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    newColorScheme();
   }, []);
 
   useEffect(() => {
@@ -75,6 +79,7 @@ const App = () => {
           />
         ))}
       </div>
+      <div><button className="copy auto" onClick={newColorScheme}>&#62; Generate new color scheme &#60;</button></div>
       {clicked < 0 && <p>Click above to get color information.</p>}
       {clicked >= 0 && (
         <div className="descript">
