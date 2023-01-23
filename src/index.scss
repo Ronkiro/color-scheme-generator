@@ -20,15 +20,21 @@ html {
   cursor: pointer;
   transition: opacity 1s;
   margin-bottom: 1vh;
+  border-radius: 5px;
 }
 
 .copy {
   background-color: #49db44;
-  color: #fff;
+  border-radius: 5px;
+  color: #282c34;
   width: 100px;
   border: none;
   height: 50px;
   cursor: pointer;
+}
+
+h1 {
+  text-align: center;
 }
 
 .descript {

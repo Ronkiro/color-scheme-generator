@@ -6,8 +6,16 @@
 .colors {
   // display: flex;
   justify-content: center;
+  justify-items: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+  margin-bottom: 1rem;
+}
+
+.newColor {
+  color: #fff;
+  font-weight: 800;
+  border: 1px solid white;
 }
 
 @media screen and(max-width: 1319px) {

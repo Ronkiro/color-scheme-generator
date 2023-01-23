@@ -108,7 +108,7 @@ const App = () => {
           />
         ))}
       </div>
-      <div><button className="copy auto" onClick={() => newColorScheme()}>&#62; Generate new color scheme &#60;</button></div>
+      <div><button className="copy auto newColor" onClick={() => newColorScheme()}>Generate new color scheme</button></div>
       {clicked < 0 && <p>Click above to get color information.</p>}
       {clicked >= 0 && (
         <div className="descript">
